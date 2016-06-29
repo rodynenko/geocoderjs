@@ -1,10 +1,10 @@
 # geocoderjs
 simple js module to geocode cities using Google API or Yandex API for browsers
 ## Usage
-Connect script `<script type='text/javascript' src='geocoder.js'></script>`
-Call function `geocoder(array_of_names, parameters, callBack)`  
+Connect script `<script type='text/javascript' src='geocoder.js'></script>`  
+Call function `geocoder(array_of_names, options, callBack)` with parameters:  
 `array_of_names` - array with names of cities or places which coordinates you want to find.  
-`parameters` - object consists of two parameters: 'service' (1 - for Google, 2 - for Yandex) and 'key' (optional for Yandex).  
+`options` - object consists of two parameters: 'service' (1 - for Google, 2 - for Yandex) and 'key' (optional for Yandex).  
 `callBack` - function(error, data); data - array of objects with formating { name, lat, lng }, where 'name' is get from array_of_names.  
 ## Example
 `geocoder(['Kiev'], { service: 2 }, function(err, d){ alert(d); });`  
