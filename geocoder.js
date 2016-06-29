@@ -2,6 +2,9 @@
   GEOCODER - simple module to geocode addresses with Google API and Yandex API.
 */
 'use strict';
+function geocoder(arr, options, callBack){
+  return (new Geocoder).geocoding(arr, options, callBack);
+}
 
 function Geocoder(){
   this.geocoding = function(arr, parameters, callBack){
@@ -55,5 +58,3 @@ function Geocoder(){
     callBack(null, responce);
   };
 };
-
-module.exports = new Geocoder;
